@@ -9,7 +9,7 @@ var possibilities = "";
 var password = "";
 
 function generatePassword() {
-  var passLength = parseInt(prompt("What is the password length?")); //this return a string
+  var passLength = parseInt(prompt("What is the password length?")); //this will return a string
 
   //validate type
   if (isNaN(passLength) === true) {
@@ -23,10 +23,10 @@ function generatePassword() {
     return;
   }
 
-  var wantLowers = confirm("Do you want lower case letters?"); //boolean type is return
-  var wantUppers = confirm("Do you want upper case letters?"); //boolean type is return
-  var wantSpecials = confirm("Do you want special characters?"); //boolean type is return
-  var wantNumbers = confirm("Do you want numbers?"); //boolean type is return
+  var wantLowers = confirm("Do you want lower case letters?"); //boolean type is returned
+  var wantUppers = confirm("Do you want upper case letters?"); //boolean type is returned
+  var wantSpecials = confirm("Do you want special characters?"); //boolean type is returned
+  var wantNumbers = confirm("Do you want numbers?"); //boolean type is returned
 
   //include lower case letter
   if (wantLowers) {
