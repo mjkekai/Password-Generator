@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 var letters = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var number = "0123456789";
-var symbols = "!@#$%^&*_-=+";
+var special = "!@#$%^&*_-=+";
 
 var possibilities = "";
 var password = "";
@@ -19,28 +19,28 @@ function generatePassword() {
 
   //validate range
   if (passLength < 8 || passLength > 128) {
-    alert("This is length is not in range 8-128!!!");
+    alert("This length is not in the range of 8-128 characters!!!");
     return;
   }
 
   var wantLowers = confirm("Do you want lower case letters?"); //boolean type is return
   var wantUppers = confirm("Do you want upper case letters?"); //boolean type is return
-  var wantSpecials = confirm("Do you want Special letters?"); //boolean type is return
+  var wantSpecials = confirm("Do you want special characters?"); //boolean type is return
   var wantNumbers = confirm("Do you want numbers?"); //boolean type is return
 
-  //include lowers
+  //include lower case letter
   if (wantLowers) {
     possibilities += letters;
   }
-  //include uppers
+  //include upper case letters
   if (wantUppers) {
     possibilities += uppercaseLetters;
   }
-  //include special
+  //include special characters 
   if (wantSpecials) {
-    possibilities += symbols;
+    possibilities += special;
   }
-  //include nums
+  //include numbers
   if (wantNumbers) {
     possibilities += number;
   }
